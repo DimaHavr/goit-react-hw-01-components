@@ -1,0 +1,30 @@
+.friend-list {
+   display: flex;
+   justify-content: center;
+   padding: 20px 0px;
+   gap: 20px;
+}
+.item {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   margin: 0;
+   background-color: antiquewhite;
+   padding: 5px 25px;
+}
+
+.status-on {
+   background-color: aquamarine;
+   padding: 5px;
+}
+
+.status-off {
+   background-color: crimson;
+   padding: 5px;
+}
+
+.name {
+   margin: 0;
+}

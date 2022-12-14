@@ -1,22 +1,14 @@
 .transaction-history {
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
+   border-collapse: collapse;
+   margin: 0 auto;
 }
-
-thead {
-   display: flex;
-   justify-content: center;
+th {
+   height: 70px;
 }
-
-tbody {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   gap: 5px;
-}
-tr {
-   display: flex;
-   gap: 100px;
+table,
+td,
+th {
+   padding: 10px;
+   border: 1px solid black;
+   text-align: start;
 }
