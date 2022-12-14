@@ -1,0 +1,22 @@
+.transaction-history {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+thead {
+   display: flex;
+   justify-content: center;
+}
+
+tbody {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 5px;
+}
+tr {
+   display: flex;
+   gap: 100px;
+}
