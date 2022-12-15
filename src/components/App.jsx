@@ -13,7 +13,13 @@ import TransactionHistory from './TransactionHistory/TransactionHistory';
 export const App = () => {
   return (
     <div>
-      <Profile item={user} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
@@ -23,9 +29,8 @@ export const App = () => {
 };
 
 App.propTypes = {
-  item: PropTypes.object,
+  data:PropTypes.array,
   title: PropTypes.string,
-  stats: PropTypes.array,
   friends: PropTypes.array,
-  items: PropTypes.array,
+  transactions: PropTypes.array,
 };
