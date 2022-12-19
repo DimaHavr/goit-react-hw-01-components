@@ -1,14 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 600;
-  padding: 30px;
-`;
-
 export const DescriptionBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,8 +15,7 @@ export const ProfileAvatar = styled.img`
   border-radius: 100%;
 `;
 
-export const ProfileText = styled.p`
-`;
+export const ProfileText = styled.p``;
 
 export const StatsList = styled.ul`
   list-style-type: none;

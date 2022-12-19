@@ -1,16 +1,31 @@
 import PropTypes from 'prop-types';
-import { Container, DescriptionBox, ProfileAvatar, ProfileText, StatsList, StatsItem} from './Profile.styled';
+import { Box } from 'components/Box';
 
-const Profile = ({
+import {
+  DescriptionBox,
+  ProfileAvatar,
+  ProfileText,
+  StatsList,
+  StatsItem,
+} from './Profile.styled';
+
+export const Profile = ({
   avatar,
   username,
   tag,
   location,
   stats: { followers, views, likes },
 }) => (
-  <Container>
+  <Box
+    display="flex"
+    justifyContent="center"
+    flexDirection="column"
+    alignItems="center"
+    fontWeight="600"
+    padding="30px"
+  >
     <DescriptionBox>
-      <ProfileAvatar src={avatar} alt="User avatar"/>
+      <ProfileAvatar src={avatar} alt="User avatar" />
       <ProfileText>{username}</ProfileText>
       <ProfileText>@{tag}</ProfileText>
       <ProfileText>{location}</ProfileText>
@@ -18,34 +33,25 @@ const Profile = ({
 
     <StatsList>
       <StatsItem>
-        <span>Followers</span>
-        <span> {followers}</span>
+        <StatsItem>Followers</StatsItem>
+        <StatsItem> {followers}</StatsItem>
       </StatsItem>
       <StatsItem>
-        <span >Views</span>
-        <span> {views}</span>
+        <StatsItem>Views</StatsItem>
+        <StatsItem> {views}</StatsItem>
       </StatsItem>
       <StatsItem>
-        <span >Likes</span>
-        <span> {likes}</span>
+        <StatsItem>Likes</StatsItem>
+        <StatsItem> {likes}</StatsItem>
       </StatsItem>
     </StatsList>
-  
- </Container>
+  </Box>
 );
 
 Profile.propTypes = {
-  item: PropTypes.exact({
-    avatar: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }),
-  }),
+  avatar: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.objectOf(PropTypes.number),
 };
-
-export default Profile;
